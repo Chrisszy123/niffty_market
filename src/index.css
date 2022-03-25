@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+	text-decoration: none;
 }
+:root {
+	--transition: all 400ms ease;
+	--color-body: rgba(238, 228, 255, 1);
+	--color-body-variant: rgba(196, 229, 242, 1);
+	--color-text-primary: rgba(0, 0, 0, 1);
+	--color-primary: #5d6ec2;
+	--color-primary-variant: #2c43ad;
+	--primary-variant-opaque: rgba(44, 67, 173, 0.5);
+	--white: rgba(255, 255, 255, 1);
+	;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	--container-width-lg: 75%;
+	--container-width-md: 86%;
+	--container-width-sm: 90%;
+}
+html {
+	scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+body {
+	font-family: "Mulish", sans-serif;
+	font-family: "Poppins", sans-serif;
+	background: linear-gradient(rgba(196, 229, 242, 1), rgba(196, 229, 242, 1));
+}
+.container {
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
+}
+h1 {
+	font-size: 2.5rem;
+}
+section {
+	margin-top: 8rem;
+}
+section > h2,
+section > h5 {
+	text-align: center;
+	/* color: var(--white); */
+}
+section > h2 {
+	/* color: var(--primary); */
+	margin-bottom: 3rem;
+}
+.btn {
+	width: max-content;
+	display: inline-block;
+	color: var(--white);
+	border-radius: 32px;
+	cursor: pointer;
+	border: 1px solid var(--primary-variant-opaque);
+	transition: var(--transition);
+	background: var(--color-primary);
+}
+.btn:hover {
+	background: var(--color-primary);
+	color: var(--color-text-primary);
+	border-color: transparent;
+}
+.btn-primary {
+	background: var(--color-primary-variant);
+	color: var(--white);
 }

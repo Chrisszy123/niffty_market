@@ -1,0 +1,45 @@
+.container.discover_container {
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
+.discover_heading {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.discover_title{
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: column;
+}
+.discover_title > span {
+	height: 1px;
+	width: 120px;
+	background: var(--color-primary-variant);
+}
+.discover_heading-switches {
+	display: flex;
+	justify-content: flex-end;
+	width: 50%;
+	gap: 4rem;
+}
+.switch_item {
+	height: 50px;
+	background: var(--white);
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	border-radius: 10px;
+	padding: 1rem 2rem;
+	border: 1px solid var(--color-primary);
+}
+.active {
+	background: var(--color-primary);
+	height: 40px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 0.7rem;
+	transition: var(--transition);
+}

@@ -54,6 +54,9 @@
 	border-radius: 32px;
 	padding: 14px, 32px, 14px, 32px;
 }
+.btn.btn-primary.full {
+	display: none;
+}
 .exchange {
 	display: flex;
 	flex-direction: column;
@@ -62,12 +65,107 @@
 	width: 40;
 	display: flex;
 	gap: 1.2rem;
+	margin-top: 1.2rem;
 }
 .exchange_item-crypto {
-	border: 1px solid var(--color-primary);
+	border: 1px solid rgba(44, 67, 173, 0.25);
 	height: auto;
 	width: 160px;
-    display: flex;
-    padding: 0.6rem 0.5rem;
+	display: flex;
+	padding: 0.6rem 0.5rem;
+	cursor: pointer;
+	transition: var(--transition);
+}
+.exchange_item-crypto:hover {
+	border: 1px solid rgba(44, 67, 173, 0.8);
+}
+.exchange_item-crypto > svg {
+	height: 32px;
+	width: 32px;
+	margin-right: 0.9rem;
+}
+.crypto_pair {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 17px;
+}
+.crypto_value {
+	color: rgba(167, 172, 225, 1);
+}
+/* ========== mobile phones ========== */
+@media screen and (max-width: 600px) {
+	.container.header_container {
+		display: flex;
+		flex-direction: column;
+		background: var(--color-body-variant);
+		overflow: hidden;
+		margin-top: 2rem;
+		text-align: center;
+		height: 380px;
+		width: 100%;
+	}
+	.header_text {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+	}
+	.header_main_text{
+		width: 100%;
 
+	}
+	.header_main_text > h2 {
+		font-family: Mulish;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 700;
+	}
+	.nft_image {
+		display: none;
+	}
+	.btn.btn-primary.full {
+		display: inline-block;
+		width: 80%;
+		margin-top: 0.4rem;
+	}
+	.btn.btn-primary {
+		display: none;
+	}
+	.search_input {
+		height: 24px;
+		width: 240px;
+		font-size: 16px;
+		font-weight: 700;
+		color: rgba(196, 196, 196, 1);
+	}
+	.search {
+		margin: 1.2rem 0;
+		background: transparent;
+		background-image: url("../../assets/discover_hero 1.png");
+		object-fit: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-direction: column;
+		justify-content: normal;
+		width: 100%;
+		height: 240px;
+		border-radius: 32px;
+		align-items: center;
+	}
+	.search > span {
+		margin: 2rem 0;
+		background: var(--white);
+		border-radius: 32px;
+		display: flex;
+		width: 80%;
+		gap: 0;
+	}
+	.search > span > input{
+		width: 100%;
+	}
+	.exchange {
+		display: none;
+	}
 }

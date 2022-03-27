@@ -1,0 +1,61 @@
+.container.popular_container{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    height: 100%;
+}
+.popular_title{
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: column;
+}
+.underline{
+    height: 2px;
+    width: 120px;
+    background: var(--color-primary-variant);
+}
+.popular_items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.popular_item{
+    background: rgba(255, 255, 255, 0.25);
+    height: 100%;
+    width: 100%;
+    border-radius: 1.2rem;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    cursor: pointer;
+}
+.card_header{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+.card_header > h5{
+    margin-top: 8px;
+}
+.card_header > img{
+    background: var(--white);
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+.card_image{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+
+}
+.card_image > img {
+    border-radius: 24px;
+    object-fit: cover;
+}
+.popular_footer{
+    display: flex;
+    justify-content: space-between;
+}
+.crypto_value{
+    display: flex;
+}

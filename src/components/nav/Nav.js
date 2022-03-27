@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './nav.css'
-import logo from '../../Naffiti.png'
-import profile from '../../image 11.png'
+import logo from '../../assets/Naffiti.png'
+import profile from '../../assets/image 11.png'
+import {GiHamburgerMenu}  from 'react-icons/gi'
 
 const Nav = () => {
+    const [nav, setNav] = useState(false); // the default state of the nav is closed hence false
+
     return(
         <nav className='container nav_container'>
             <div className='nav_logo'>
@@ -21,6 +24,14 @@ const Nav = () => {
                 <img src={profile} alt='' className='profile_pic'></img>
             </div>
             </div> 
+            <div className='menu_bar'>
+                <GiHamburgerMenu onClick={() => setNav(true)} />
+                {nav ? (
+                    <div className='mobile_nav'>
+                    Hello im the nav 
+                </div>
+                ): null}
+            </div>
         </nav>
     )
 }

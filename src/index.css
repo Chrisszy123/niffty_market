@@ -11,7 +11,7 @@
 :root {
 	--transition: all 400ms ease;
 	--color-body: rgba(238, 228, 255, 1);
-	--color-body-variant: rgba(196, 229, 242, 1);
+	--color-body-variant: rgba(196, 229, 242, 0.158);
 	--color-text-primary: rgba(0, 0, 0, 1);
 	--color-primary: #5d6ec2;
 	--color-primary-variant: #2c43ad;
@@ -51,11 +51,7 @@ h1 {
 section {
 	margin-top: 8rem;
 }
-section > h2,
-section > h5 {
-	text-align: center;
-	/* color: var(--white); */
-}
+
 section > h2 {
 	/* color: var(--primary); */
 	margin-bottom: 3rem;
@@ -78,4 +74,22 @@ section > h2 {
 .btn-primary {
 	background: var(--color-primary-variant);
 	color: var(--white);
+}
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+	section {
+		margin-top: 6rem;
+	}
+}
+
+/* =======  media queries (small devices) ======= */
+@media screen and (max-width: 600px) {
+	.container {
+		width: var(--container-width-sm);
+	}
+	section > h2 {
+		margin-bottom: 2rem;
+	}
 }
